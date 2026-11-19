@@ -1,0 +1,39 @@
+{
+  "name": "filefit",
+  "version": "1.0.0",
+  "description": "FileFit — Instant Image Compressor & HEIC to JPG",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run generate-icons && tsc -b && vite build",
+    "generate-icons": "node scripts/generate-icons.mjs",
+    "generate-store-assets": "node scripts/generate-store-assets.mjs",
+    "test": "npx tsx scripts/verify-engine.mjs",
+    "release:zip": "npm run build && node scripts/pack-release.mjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "heic2any": "^0.0.4",
+    "lucide-react": "^1.16.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^3.0.2"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^3.0.0",
+    "@types/archiver": "^8.0.0",
+    "@types/chrome": "^0.1.20",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "archiver": "^8.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  }
+}
